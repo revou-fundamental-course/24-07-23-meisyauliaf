@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/00cd98ad36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+
+    <title>Travel Agent Project</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#"> <h2 class="judul">mytravel</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#banner">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Our Package</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#callus">Call Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="banner">
+      <div class="banner mb-4">
+        <div class="container">
+          <h2 class="title-banner">Your Trusted Travel Agent's</h2>
+          <p class="subtitle-banner">Your Happiness is our happiness</p>
+        </div>
+    </div>
+
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="image-container">
+                    <img class="img-slideshow" src="image1.jpg"/>
+                    <img class="img-slideshow" src="image2.jpg"/>
+                    <img class="img-slideshow" src="image3.jpg"/>
+                    </div>
+                    <div class="col-lg-7 col-sm-12"> <p class="wel">"Liburan jadi menyenangkan bersama Travel Agenku"</p></div>
+                      <div class="container">
+                      <div class="row">
+                     <div class="col-lg-1 col-sm-12">
+                      <div class="profile">          
+                       <i class="fa-regular fa-user"></i>
+                       </div>
+                       </div> 
+                      <div class="col-lg-10 col-sm-12">
+                    <div class="username">
+                      <h6 class="uname">Florence Hughes</h6>
+                      <p class="yut"> Ibu Rumah Tangga, 28</p>
+                    </div>
+                  </div>
+                  <hr class="custom-line">
+               </div>
+               </div>
+               </div>
+               
+               <script>
+                 var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                showDivs((slideIndex += n));
+                }
+
+                function showDivs(n) {
+                var i;
+                var imgList = document.getElementsByClassName("img-slideshow");
+                if (n > imgList.length) slideIndex = 1;
+                else if (n < 1) slideIndex = imgList.length;
+
+                for (i = 0; i < imgList.length; i++) {
+                 imgList[i].style.display = "none";
+                }
+
+                imgList[slideIndex - 1].style.display = "block";
+                }
+                setInterval(() => {
+                plusDivs(1);
+               }, 3000);
+              </script>
+
+                <div class="col-lg-4 col-sm-12"> 
+                    <div class="form-container">
+                     <form id="contactForm">
+                     <h3 class="contact">Contact Us</h3>
+                     <p class="per">Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+                     <br>
+                     <br>
+                     <label for="name" class="nama">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="First and last Name" required>
+                     <label for="email" class="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    <label for="interest" class="interest">What are you Interested in?</label>
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="jenis">
+                    <option selected class="option">Select Option</option>
+                    <option value="travel">Travel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="hanout">Hangout</option>
+                    </select>
+                    <br>
+                    <button class="button" type="button" onclick="submitForm()">SEND</button>
+                    </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+          function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const interest = document.getElementById('interest').value;
+      
+            alert(`Thank you, ${name}! We will contact you soon regarding your interest in ${interest}.`);
+          }
+        </script>
+
+
+       <!-- <div class="col-lg-6 col-sm-12"> <p class="wel">"Liburan jadi menyenangkan bersama Travel Agenku"</p></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-1 col-sm-12">
+            <div class="profile">          
+              <i class="fa-regular fa-user"></i>
+            </div>
+            </div> 
+            <div class="col-lg-10 col-sm-12">
+            <div class="username">
+              <h6 class="uname">Florence Hughes</h6>
+              <p class="yut"> Ibu Rumah Tangga, 28</p>
+            </div>
+            </div>
+          </div>
+        </div>-->
+        
+        <div class="headline">
+          <div class="col-lg-5 col-sm-12">
+          <h6>Use this space to provide users with more information
+          about your offer. Consider it a follow-up to your headline
+          and explain the benefits of your service or product</h6>
+          </div>
+        </div>
+        <div class="headline2">
+          <div class="row">
+          <div class="col-lg-1"><i class="fa-solid fa-1" style="color: #8e8792;"></i></div>
+          <div class="col-lg-3 col-sm-12">
+            <p class="foryou">Your first feature, written in the form of a benefit statement</p> 
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1"><i class="fa-solid fa-2" style="color: #8e8792;"></i></div>
+            <div class="col-lg-3 col-sm-12"> 
+              <p class="foryou">Your second feature, written in the form of a benefit statement</p> 
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-1"><i class="fa-solid fa-3" style="color: #8e8792;"></i></div>
+              <div class="col-lg-3 col-sm-12">
+                <p class="foryou">Your third feature written, in the form of a benefit statement</p>
+              </div>
+              </div>
+        </div>
+
+        <section id="packages">
+        <div class="featured text-center">
+          <h1 id="featured-item">Our Package</h1>
+        </div>
+
+        <div class="container ryu">
+          <div class="row">
+            <div class="col-lg-1"><i class="fa-solid fa-star" style="color: #878d97;"></i></div>
+            <div class="col-lg-3">
+              <h5 class="bali">Bali</h5>
+              <p class="parag">Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik</p>
+            </div>
+            <div class="col-lg-1"><i class="fa-solid fa-star" style="color: #878d97;"></i></div>
+            <div class="col-lg-3">
+              <h5 class="bali">Japan</h5>
+              <p class="parag">Travel dan wisata di Japan. Kunjungi cagar budaya dan kuliner yang menarik </p>
+            </div>
+            <div class="col-lg-1"><i class="fa-solid fa-star" style="color: #878d97;"></i></div>
+            <div class="col-lg-3">
+              <h5 class="bali">Singapore</h5>
+              <p class="parag">Travel dan wisata di Singapore. Kunjungi cagar budaya dan kuliner yang menarik</p>
+            </div>
+          </div>
+          <div class="row">
+            <hr class="custom-line2">
+          </div>
+          <div class="row">
+            <div class="col-lg-1"><i class="fa-solid fa-star" style="color: #878d97;"></i></div>
+            <div class="col-lg-3">
+              <h5 class="bali">Bandung</h5>
+              <p class="parag">Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik</p>
+            </div>
+            <div class="col-lg-1"><i class="fa-solid fa-star" style="color: #878d97;"></i></div>
+            <div class="col-lg-3">
+              <h5 class="bali">Surabaya</h5>
+              <p class="parag">Travel dan wisata di Japan. Kunjungi cagar budaya dan kuliner yang menarik </p>
+            </div>
+            <div class="col-lg-1"><i class="fa-solid fa-star" style="color: #878d97;"></i></div>
+            <div class="col-lg-3">
+              <h5 class="bali">Jogja</h5>
+              <p class="parag">Travel dan wisata di Singapore. Kunjungi cagar budaya dan kuliner yang menarik</p>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section id="callus">
+        <div class="container">
+          <div class="footer">
+          <hr clas="custom-line3">
+          <h3 class="s-class">Your Closing Argument Headline</h3>
+          <p class="perep">Thank you for using our agents, mnskaskel makjeijakjs ndhusiaixji bd</p>
+          <button class="button2" type="button" >CALL TO ACTION</button>
+          </div>
+        </div>
+        </section>
+
+        <div class="footer2">
+          <h2 class="judul2">mytravel</h2>
+          <p class="sup"> Terms of service   Privacy policy</p>
+          <p class="sup"> 2019   Moqups</p>
+        </div>
+  </body>
+</html>
